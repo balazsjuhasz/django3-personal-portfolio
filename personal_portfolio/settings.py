@@ -20,14 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0b69r6_5cif0y+y3q5dr^q6)ltnfq($9y*s@a$aw7ch^)u5-w1'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = ['balazsjuhasz.pythonanywhere.com']
 
+with open(os.path.join(BASE_DIR, 'personal_portfolio/secret.key')) as f:
+    SECRET_KEY = f.read().strip()
 
 # Application definition
 

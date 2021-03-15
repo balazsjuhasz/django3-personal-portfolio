@@ -25,7 +25,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['balazsjuhasz.pythonanywhere.com']
 
-with open(os.path.join(BASE_DIR, 'personal_portfolio/secret.key')) as f:
+with open(os.path.join(BASE_DIR, 'personal_portfolio/' 'secret.key')) as f:
     SECRET_KEY = f.read().strip()
 
 # Application definition
